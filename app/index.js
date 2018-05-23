@@ -1,17 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/styles.scss';
+import { Route, Router, hashHistory } from 'react-router';
+import Main from './components/Main';
 
-const objOne = {
-	name: 'Andrew',
-	location: 'London'
-}
-
-const objTwo = {
-	age: 25,
-	...objOne
-}
-
-console.dir(objTwo);
-
-ReactDOM.render(<h1>Boilerplate app</h1>, document.getElementById('root'));
+ReactDOM.render(<Router history={hashHistory}>
+	<Route path="/" component={ Main }>
+	</Route>
+</Router>, document.getElementById('root'));
