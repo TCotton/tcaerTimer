@@ -4,7 +4,7 @@
   "description": "Simple simple",
   "main": "index.js",
   "scripts": {
-    "test": "karma start --single-run",
+    "test": "karma start test/karma.conf.js",
     "dev": "webpack --mode development ./app/index.js --output ./app/bundle.js",
     "build": "webpack --mode production ./app/index.js  --output ./dist/bundle.js",
     "start": "webpack-dev-server --mode development ./app/index.js --open"
