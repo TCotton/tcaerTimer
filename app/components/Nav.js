@@ -9,18 +9,20 @@ const Nav = ReactClass({
 				<div className='top-bar-left'>
 					<ul className='menu'>
 						<li>
-							<IndexLink to='/' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>React Time App</IndexLink>
+							<IndexLink to='/' activeClassName='active-link' activeStyle={{fontWeight: 'bold'}}>React Time App</IndexLink>
 						</li>
 						<li>
-							<IndexLink to='/about' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Timer</IndexLink>
+							<IndexLink to='/' activeClassName='active-link' activeStyle={{fontWeight: 'bold'}}>Timer</IndexLink>
 						</li>
 						<li>
-							<IndexLink to='/examples' activeClassName='active' activeStyle={{fontWeight: 'bold'}}>Countdown</IndexLink>
+							<IndexLink to='/' activeClassName='active-link' activeStyle={{fontWeight: 'bold'}}>Countdown</IndexLink>
 						</li>
 					</ul>
 				</div>
 				<div className='top-bar-right'>
-					<p>Created by Andy Walpole</p>
+					<ul className='menu'>
+						<li className='menu-text'>Created by Andy Walpole</li>
+					</ul>
 				</div>
 			</div>
 		);
