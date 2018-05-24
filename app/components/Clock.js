@@ -30,7 +30,7 @@ const Clock = ReactClass({
 
 		return (
 			<div className='clock'>
-					<span className='clock-text'>
+					<span className='clock-text text-center'>
 						{this.formatSeconds(totalSeconds)}
 					</span>
 			</div>
