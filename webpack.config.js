@@ -6,8 +6,10 @@ const webpack = require('webpack');
 module.exports = {
 	resolve: {
 		alias: {
-			Main: path.resolve(path.dirname(''), 'app/components/Main.js'),
-			Nav: path.resolve(path.dirname(''), 'app/components/Nav.js'),
+			Main: path.resolve(__dirname, 'app/components/Main.js'),
+			Nav: path.resolve(__dirname, 'app/components/Nav.js'),
+			Timer: path.resolve(__dirname, 'app/components/Timer.js'),
+			Countdown: path.resolve(__dirname, 'app/components/Countdown.js'),
 		}
 	},
 	module: {

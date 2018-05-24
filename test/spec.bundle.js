@@ -1,4 +1,7 @@
 import 'react';
+import 'react-dom';
+import 'react-dom/test-utils';
+import 'react-test-renderer/shallow';
 
 // We use the context method on `require` which Webpack created
 // in order to signify which files we actually want to require or import.

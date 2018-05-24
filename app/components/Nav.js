@@ -1,5 +1,5 @@
 import React from 'react';
-import { IndexLink } from 'react-router';
+import { IndexLink, Link } from 'react-router';
 import ReactClass from 'create-react-class';
 
 const Nav = ReactClass({
@@ -8,14 +8,14 @@ const Nav = ReactClass({
 			<div className='top-bar'>
 				<div className='top-bar-left'>
 					<ul className='menu'>
-						<li>
-							<IndexLink to='/' activeClassName='active-link' activeStyle={{fontWeight: 'bold'}}>React Time App</IndexLink>
+						<li className='menu-text'>
+							React Time App
 						</li>
 						<li>
-							<IndexLink to='/' activeClassName='active-link' activeStyle={{fontWeight: 'bold'}}>Timer</IndexLink>
+							<IndexLink to='/timer' activeClassName='active-link' activeStyle={{fontWeight: 'bold'}}>Timer</IndexLink>
 						</li>
 						<li>
-							<IndexLink to='/' activeClassName='active-link' activeStyle={{fontWeight: 'bold'}}>Countdown</IndexLink>
+							<Link to='/countdown' activeClassName='active-link' activeStyle={{fontWeight: 'bold'}}>Countdown</Link>
 						</li>
 					</ul>
 				</div>
