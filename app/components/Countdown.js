@@ -4,22 +4,44 @@ import CountdownForm from './CountdownForm';
 import ReactClass from 'create-react-class'
 
 const Countdown = ReactClass({
-	getInitialState: function() {
+	getInitialState: function () {
 		return {
-			count: 0
+			count: 0,
+			countdownStatus: 'stopped'
 		}
 	},
-	handleSetCountdown: function(seconds) {
+	componentDidUpdate: function (prevProps, prevState) {
+		if (this.state.countdownStatus !== prevState.countdownStatus) {
+			switch (this.state.countdownStatus) {
+				case 'started':
+					this.startTimer();
+					break;
+			}
+		}
+	},
+	startTimer: function () {
+		this.timer = setInterval(() => {
+			const newCount = this.state.count - 1;
+			this.setState({
+				count: newCount >= 0 ? newCount : 0
+			});
+
+		}, 1000);
+	},
+	handleSetCountdown: function (seconds) {
 		this.setState({
-			count: seconds
+			count: seconds,
+			countdownStatus: 'started'
 		});
 	},
 	render: function () {
+		const {count} = this.state;
+
 		return (
-		<div>
-			<Clock totalSeconds={this.state.count} />
-			<CountdownForm onSetCountdown={this.handleSetCountdown}/>
-		</div>
+			<div>
+				<Clock totalSeconds={count}/>
+				<CountdownForm onSetCountdown={this.handleSetCountdown}/>
+			</div>
 		);
 	}
 });
