@@ -1,3 +1,5 @@
+import CountdownForm from './app/components/CountdownForm'
+
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
@@ -11,6 +13,7 @@ module.exports = {
 			Timer: path.resolve(__dirname, 'app/components/Timer.js'),
 			Countdown: path.resolve(__dirname, 'app/components/Countdown.js'),
 			Clock: path.resolve(__dirname, 'app/components/Clock.js'),
+			CountdownForm: path.resolve(__dirname, 'app/components/CountdownForm.js'),
 		}
 	},
 	module: {
