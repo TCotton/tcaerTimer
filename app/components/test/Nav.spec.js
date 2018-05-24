@@ -1,16 +1,14 @@
 import Main from '../Main';
 
-describe('Main service', () => {
-	let service;
+describe('Main class', () => {
+	let reactClass;
 
 	// Providers
 	beforeEach(function () {
-		service = Main;
+		reactClass = Main;
 	});
 
-	describe('Authenticate', () => {
-		it('should be defined', () => {
-			expect(service).toBeDefined();
-		});
+	it('should be defined', () => {
+		expect(reactClass).toBeDefined();
 	});
 });
