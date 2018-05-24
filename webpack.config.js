@@ -10,6 +10,7 @@ module.exports = {
 			Nav: path.resolve(__dirname, 'app/components/Nav.js'),
 			Timer: path.resolve(__dirname, 'app/components/Timer.js'),
 			Countdown: path.resolve(__dirname, 'app/components/Countdown.js'),
+			Clock: path.resolve(__dirname, 'app/components/Clock.js'),
 		}
 	},
 	module: {
