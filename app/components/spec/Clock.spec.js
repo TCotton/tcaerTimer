@@ -1,4 +1,7 @@
 import Clock from '../Clock';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactTestUtils from 'react-dom/test-utils';
 
 fdescribe('Clock class', () => {
 	let reactClass;
@@ -10,6 +13,16 @@ fdescribe('Clock class', () => {
 
 	it('should be defined', () => {
 		expect(reactClass).toBeDefined();
+	});
+
+	describe('render method', () => {
+		it('should render clock to output', () => {
+			const clock = ReactTestUtils.renderIntoDocument(<Clock totalSeconds={62}/>);
+			const $el = $(ReactDOM.findDOMNode(clock));
+			const actualText = $el.find('.clock-text').text();
+
+			expect(actualText).toBe('01:02');
+		});
 	});
 
 	describe('formatSeconds method', () => {
