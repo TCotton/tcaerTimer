@@ -4,7 +4,7 @@ import ReactTestUtils from 'react-dom/test-utils';
 
 import CountdownForm from '../CountdownForm';
 
-fdescribe('CountdownForm class', () => {
+describe('CountdownForm class', () => {
 	let reactClass;
 
 	beforeEach(() => {

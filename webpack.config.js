@@ -12,6 +12,7 @@ module.exports = {
 			CountdownForm: path.resolve(__dirname, 'app/components/CountdownForm.js'),
 			Countdown: path.resolve(__dirname, 'app/components/Countdown.js'),
 			Clock: path.resolve(__dirname, 'app/components/Clock.js'),
+			Controls: path.resolve(__dirname, 'app/components/Controls.js'),
 		}
 	},
 	module: {
